@@ -111,6 +111,7 @@
 
                             <div class="col-auto mbr-section-btn mbr-col-md-12 mbr-col-sm-12 mbr-col-lg-8 align-center">
                                 <button type="submit" class="btn btn-primary display-4">Login</button>
+                                <button type="submit" class="btn btn-primary display-4">Register</button>
 
 
                             </div>

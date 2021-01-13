@@ -1,3 +1,15 @@
+<?php  
+	//start the session
+	session_start();
+	
+	include 'connect.php';
+	if(isset($_POST['submit'])){
+			foreach ($_POST as $key => $val) {
+			${$key} = $val;
+			$_SESSION[''.$key.''] = $val;
+		}
+	}
+	?>
 <!DOCTYPE html>
 <html>
 
@@ -87,44 +99,44 @@
             <br>
             <div class="form-group">
                 <label>Nama Lengkap</label>
-                <input v-model="form.nama" type="text" name="nama" class="form-control"
-                    :class="{ 'is-invalid': form.errors.has('nama') }">
+                <input v-model="form.nama" type="text" name="nama" class="form-control" 
+                required autofocus value="<?php isset($_SESSION['nama'])  ?  print($_SESSION['nama']) : ""; ?>">
             </div>
 
             <div class="form-group">
                 <label>Pendidikan Terakhir</label>
                 <input v-model="form.title_karyawan" type="text" name="title_karyawan" class="form-control"
-                    :class="{ 'is-invalid': form.errors.has('title_karyawan') }">
+                 required value="<?php isset($_SESSION['pendidikan_terakhir'])  ?  print($_SESSION['pendidikan_terakhir']) : ""; ?>">
             </div>
 
             <div class="form-group">
                 <label>Email</label>
                 <input v-model="form.title_karyawan" type="text" name="title_karyawan" class="form-control"
-                    :class="{ 'is-invalid': form.errors.has('title_karyawan') }">
+                   required value="<?php isset($_SESSION['email'])  ?  print($_SESSION['email']) : ""; ?>">
             </div>
             <div class="form-group">
                 <label>Alamat Rumah</label>
                 <textarea rows="3" v-model="form.body_karyawan" type="text" name="body_karyawan" class="form-control"
-                    :class="{ 'is-invalid': form.errors.has('body_karyawan') }"></textarea>
+                    value="<?php isset($_SESSION['alamat'])  ?  print($_SESSION['alamat']) : ""; ?>"></textarea>
             </div>
 
             <div class="form-group">
                 <label>Nomor Telepon</label>
                 <input v-model="form.title_karyawan" type="text" name="title_karyawan" class="form-control"
-                    :class="{ 'is-invalid': form.errors.has('title_karyawan') }">
+                    value="<?php isset($_SESSION['no_telepon'])  ?  print($_SESSION['no_telepon']) : ""; ?>">
             </div>
 
             <div class="form-group">
                 <label>Bukti</label>
-                <input type="file" id="myFile" name="filename" class="form-control">
+                <input type="file" id="myFile" name="filename" class="form-control action="upload.php">
             </div>
             <div class="col-md-12 input-group-btn align-center">
-                <button type="submit" class="btn btn-primary btn-form display-4">Daftar</button>
+                <button type="submit" value="upload" class="btn btn-primary btn-form display-4">Daftar</button>
             </div>
             <br>
         </div>
     </section>
-
+s
     <section class="footer7 cid-slSNVaAO9W" once="footers" id="footer7-1b">
 
         <div class="container">
@@ -141,7 +153,7 @@
         style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
         <a href="https://mobirise.site/b" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a>
         <p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/i"
-                style="color:#aaa;">Made with Mobirise</a> web creator</p>
+                style="color:#aaa;"></a> web creator</p>
     </section>
     <script src="assets/web/assets/jquery/jquery.min.js"></script>
     <script src="assets/popper/popper.min.js"></script>

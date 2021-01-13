@@ -115,50 +115,40 @@
             </thead>
 
             <tbody>
+						<?php  
+						
+							include 'connect.php';
+  
+				    		$query = "SELECT nama, pendidikan_terakhir,alamat,cv FROM pelamar";
+
+				    		$exec  = mysqli_query($connect,$query);
+
+				    		if ($exec) {
+				    			$count = mysqli_num_rows($exec);
+				    			if ($count > 0) {
+				    				$no = 0;
+				    				while ($rows = mysqli_fetch_array($exec)) {
+				    				    
+				    				
+				    	?>
+						    			<tr>
+											<td><?php echo $rows['nama'] ?></td>
+											<td><?php echo $rows['pendidikan_terakhir'] ?></td>
+											<td><?php echo $rows['alamat'] ?></td>
+											<td><?php echo "<img src='image/$rows[cv]' width='100' height='100' />";?></td>
+										</tr>
+				    	<?php
+				    				}
+				    			}
+				    		}else{
+				    			echo mysqli_error($connect);
+				    		}
+
+				    	?>
 
 
 
-
-              <tr>
-
-
-
-
-                <td class="body-item mbr-fonts-style display-7">Jeanna Schmal</td>
-                <td class="body-item mbr-fonts-style display-7">44</td>
-                <td class="body-item mbr-fonts-style display-7">2025-10-17</td>
-                <td class="body-item mbr-fonts-style display-7">$317.000</td>
-              </tr>
-              <tr>
-
-
-
-
-                <td class="body-item mbr-fonts-style display-7">Caren Rials</td>
-                <td class="body-item mbr-fonts-style display-7">35</td>
-                <td class="body-item mbr-fonts-style display-7">2024-04-12</td>
-                <td class="body-item mbr-fonts-style display-7">$445.500</td>
-              </tr>
-              <tr>
-
-
-
-
-                <td class="body-item mbr-fonts-style display-7">Leon Rogol</td>
-                <td class="body-item mbr-fonts-style display-7">66</td>
-                <td class="body-item mbr-fonts-style display-7">2025-05-22</td>
-                <td class="body-item mbr-fonts-style display-7">$152.558</td>
-              </tr>
-              <tr>
-
-
-
-
-                <td class="body-item mbr-fonts-style display-7">Shala Barrera</td>
-                <td class="body-item mbr-fonts-style display-7">70</td>
-                <td class="body-item mbr-fonts-style display-7">2025-05-15</td>
-                <td class="body-item mbr-fonts-style display-7">$459.146</td>
-              </tr>
+        
             </tbody>
           </table>
         </div>

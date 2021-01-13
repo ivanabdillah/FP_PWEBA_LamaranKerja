@@ -46,7 +46,15 @@
         }
     </style>
 
+    <script type="text/javascript">
 
+    function showImage(){
+        document.getElementById('loadingImage').style.visibility="visible";
+    }
+
+   
+
+    </script>
 
 </head>
 
@@ -184,72 +192,69 @@
                             <thead class="bg-secondary">
                                 <tr>
                                     <th>No.</th>
+									<th>Data Masuk</th>
                                     <th>Nama</th>
                                     <th>Pendidikan Terakhir</th>
                                     <th>Email</th>
                                     <th>Alamat Rumah</th>
                                     <th>Nomor Telepon</th>
                                     <th>CV</th>
+									<th>Kondisi</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>2020-07-31</td>
-                                    <td>Semen</td>
-                                    <td>Toko Rahayu</td>
-                                    <td>120.000</td>
-                                    <td>Surabaya</td>
-                                    <td>ivan@mail.com</td>
-                                    <td style="width: 100px;">
-                                        <button class="btn btn-primary">Lihat&nbsp;<i class="far fa-eye"></i></button>
-                                        <button class="btn btn-success">Edit&nbsp;<i class="fa fa-edit"></i></button>
-                                        <button class="btn btn-danger">Hapus&nbsp;<i class="fa fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>2020-08-05</td>
-                                    <td>Semen</td>
-                                    <td>Toko Belakang</td>
-                                    <td>120.000</td>
-                                    <td>Gresik</td>
-                                    <td>ridho@mail.com</td>
-                                    <td>
-                                        <button class="btn btn-primary">Lihat&nbsp;<i class="far fa-eye"></i></button>
-                                        <button class="btn btn-success">Edit&nbsp;<i class="fa fa-edit"></i></button>
-                                        <button class="btn btn-danger">Hapus&nbsp;<i class="fa fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>2020-08-04</td>
-                                    <td>Laptop</td>
-                                    <td>Toko Rahayu</td>
-                                    <td>3.000.000</td>
-                                    <td>Kebumen</td>
-                                    <td>simun@mail.com</td>
-                                    <td>
-                                        <button class="btn btn-primary">Lihat&nbsp;<i class="far fa-eye"></i></button>
-                                        <button class="btn btn-success">Edit&nbsp;<i class="fa fa-edit"></i></button>
-                                        <button class="btn btn-danger">Hapus&nbsp;<i class="fa fa-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>2020-08-04</td>
-                                    <td>HP</td>
-                                    <td>Toko Depan</td>
-                                    <td>800.000</td>
-                                    <td>Mojokerto</td>
-                                    <td>tes@mail.com</td>
-                                    <td>
-                                        <button class="btn btn-primary">Lihat&nbsp;<i class="far fa-eye"></i></button>
-                                        <button class="btn btn-success">Edit&nbsp;<i class="fa fa-edit"></i></button>
-                                        <button class="btn btn-danger">Hapus&nbsp;<i class="fa fa-trash"></i></button>
-                                    </td>
-                                </tr>
+                                <?php  
+						
+							include 'connect.php';
+  
+				    		$query = "SELECT * FROM pelamar";
+
+				    		$exec  = mysqli_query($connect,$query);
+
+				    		if ($exec) {
+				    			$count = mysqli_num_rows($exec);
+				    			if ($count > 0) {
+				    				$no = 0;
+				    				while ($rows = mysqli_fetch_array($exec)) {
+				    				    
+				    				
+				    	?>
+						    			<tr>
+											<td><?php echo ++$no; ?></td>
+											<td><?php echo $rows['data_masuk'] ?></td>
+											<td><?php echo $rows['nama'] ?></td>
+											<td><?php echo $rows['pendidikan_terakhir'] ?></td>
+											<td><?php echo $rows['email'] ?></td>
+											<td><?php echo $rows['alamat'] ?></td>
+											<td><?php echo $rows['no_telepon'] ?></td>
+											<td><button class="btn btn-primary">Lihat&nbsp;<i class="far fa-eye" onclick="showImage()"></i></button>
+											<?php echo "<img id=loadingImage src='image/$rows[cv]' width='100' height='100' style='visibility:hidden'/>";?></td>
+											<td><button class="btn btn-primary">Konfirmasi&nbsp;<i class="far fa-eye"></i></button></td>
+											
+											<td>
+											
+											<a href="hapus_pelamar.php?id=<?php echo $rows['Id'] ?>" class="btn btn-primary btn-sm">Hapus<i class="fa fa-trash"></i></a>
+											<!--<button class="btn btn-danger">Hapus&nbsp;<i class="fa fa-trash"></i></button>-->
+											</td>
+										</tr>
+				    	<?php
+				    				}
+				    			}else{
+				    	?>
+				    			<tr>
+									<td colspan="6" align="center"><h4><b>Kosong</b></h4></td>
+								</tr>
+				    	<?php
+				    			}
+				    		}else{
+				    			echo mysqli_error($connect);
+				    		}
+
+				    	?>
+								
+								
+	
                             </tbody>
                         </table>
                     </div>

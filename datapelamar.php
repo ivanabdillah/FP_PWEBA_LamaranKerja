@@ -37,7 +37,7 @@
       <div class="container">
         <div class="navbar-brand">
 
-          <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7" href="https://mobiri.se">CV
+          <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7">CV
               Bahagia Abadi&nbsp;</a></span>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -50,17 +50,20 @@
           </div>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-            <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html">
-                Beranda</a></li>
-            <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="login.html">
-                Login</a></li>
-            <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="lowongan.html">
-                Daftar Lowongan</a></li>
-            <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                href="datapelamar.html">Daftar Pelamar</a>
-            </li>
-          </ul>
+        <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="index.php">
+                                Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="login.php">
+                                Login</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="lowongan.php">
+                                Daftar Lowongan</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
+                                href="datapelamar.php">Daftar Pelamar</a>
+                        </li>
+                    </ul>
 
 
         </div>
@@ -188,7 +191,7 @@
       <div class="media-container-row align-center mbr-white">
         <div class="col-12">
           <p class="mbr-text mb-0 mbr-fonts-style display-7">
-            © Copyright 2025 Mobirise - All Rights Reserved
+            © 2021 - CV Bahagia Abadi
           </p>
         </div>
       </div>

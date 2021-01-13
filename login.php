@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
     <meta name="description" content="">
 
 
@@ -40,7 +39,7 @@
                 <div class="navbar-brand">
 
                     <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-7"
-                            href="https://mobiri.se">CV Bahagia Abadi&nbsp;</a></span>
+                            >CV Bahagia Abadi&nbsp;</a></span>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false"
@@ -55,16 +54,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                                href="index.html">
+                                href="index.php">
                                 Beranda</a></li>
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                                href="login.html">
+                                href="login.php">
                                 Login</a></li>
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                                href="lowongan.html">
+                                href="lowongan.php">
                                 Daftar Lowongan</a></li>
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                                href="datapelamar.html">Daftar Pelamar</a>
+                                href="datapelamar.php">Daftar Pelamar</a>
                         </li>
                     </ul>
 
@@ -133,13 +132,13 @@
             <div class="media-container-row align-center mbr-white">
                 <div class="col-12">
                     <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                        © Copyright 2025 Mobirise - All Rights Reserved
+                    © 2021 - CV Bahagia Abadi
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <section
+    <section style="display: none;"
         style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
         <a href="https://mobirise.site/q" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a>
         <p style="flex: 0 0 auto; margin:0; padding-right:1rem;">How to create a site - <a

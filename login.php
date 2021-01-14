@@ -103,8 +103,8 @@
                                 <input type="email" name="email" placeholder="Email" data-form-field="email"
                                     class="form-control" value="" id="email-form6-10">
                             </div>
-                            <div data-for="phone" class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                <input type="tel" name="phone" placeholder="Password" data-form-field="phone"
+                            <div data-for="password" class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                <input type="password" name="password" placeholder="Password"
                                     class="form-control" value="" id="phone-form6-10">
                             </div>
 

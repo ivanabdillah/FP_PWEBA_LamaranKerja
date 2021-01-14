@@ -3,7 +3,7 @@
 error_reporting(0);
 
 
-$db_name 	= "fp";
+$db_name 	= "fppweb";
 $host		= "localhost";
 $username	= "root";
 $password	= "";

@@ -85,7 +85,7 @@
         </nav>
     </section>
 
-    <section class="mbr-section form1 cid-slDKM5pxWZ" id="form1-1d">
+    <form class="mbr-section form1 cid-slDKM5pxWZ" id="form1-1d" action="upload.php" method="POST">
         <div class="container">
             <br>
             <br>
@@ -99,44 +99,39 @@
             <br>
             <div class="form-group">
                 <label>Nama Lengkap</label>
-                <input v-model="form.nama" type="text" name="nama" class="form-control" 
-                required autofocus value="<?php isset($_SESSION['nama'])  ?  print($_SESSION['nama']) : ""; ?>">
+                <input v-model="form.nama" type="text" name="nama" class="form-control">
             </div>
 
             <div class="form-group">
                 <label>Pendidikan Terakhir</label>
-                <input v-model="form.title_karyawan" type="text" name="title_karyawan" class="form-control"
-                 required value="<?php isset($_SESSION['pendidikan_terakhir'])  ?  print($_SESSION['pendidikan_terakhir']) : ""; ?>">
+                <input v-model="form.title_karyawan" type="text" name="pendidikan_terakhir" class="form-control">
             </div>
 
             <div class="form-group">
                 <label>Email</label>
-                <input v-model="form.title_karyawan" type="text" name="title_karyawan" class="form-control"
-                   required value="<?php isset($_SESSION['email'])  ?  print($_SESSION['email']) : ""; ?>">
+                <input v-model="form.title_karyawan" type="text" name="email" class="form-control">
             </div>
             <div class="form-group">
                 <label>Alamat Rumah</label>
-                <textarea rows="3" v-model="form.body_karyawan" type="text" name="body_karyawan" class="form-control"
-                    value="<?php isset($_SESSION['alamat'])  ?  print($_SESSION['alamat']) : ""; ?>"></textarea>
+                <textarea rows="3" v-model="form.body_karyawan" type="text" name="alamat" class="form-control"></textarea>
             </div>
 
             <div class="form-group">
                 <label>Nomor Telepon</label>
-                <input v-model="form.title_karyawan" type="text" name="title_karyawan" class="form-control"
-                    value="<?php isset($_SESSION['no_telepon'])  ?  print($_SESSION['no_telepon']) : ""; ?>">
+                <input v-model="form.title_karyawan" type="text" name="no_telepon" class="form-control">
             </div>
 
-            <div class="form-group">
-                <label>Bukti</label>
-                <input type="file" id="myFile" name="filename" class="form-control action="upload.php">
-            </div>
+            <!-- <div class="form-group">
+                <label>Foto CV</label>
+                <input type="file" id="myFile" name="filename" class="form-control">
+            </div> -->
             <div class="col-md-12 input-group-btn align-center">
                 <button type="submit" value="upload" class="btn btn-primary btn-form display-4">Daftar</button>
             </div>
             <br>
         </div>
-    </section>
-s
+    </form>
+
     <section class="footer7 cid-slSNVaAO9W" once="footers" id="footer7-1b">
 
         <div class="container">

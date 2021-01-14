@@ -11,4 +11,9 @@ if (isset($_GET['id'])) {
 
 	$exec 		= 	mysqli_query($connect, $query);
 }
+
+if ($query) {
+	$_SESSION['username'] = $username;
+	header('Location: listedit.php');
+}
 ?>

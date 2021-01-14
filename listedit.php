@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="Mobirise v5.2.0, mobirise.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
     <meta name="description" content="">
 
 
@@ -83,10 +82,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                                href="login.html">
+                                href="loginadmin.php">
                                 Login</a></li>
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4"
-                                href="datapelamar.html">Daftar Pelamar</a>
+                                href="datapelamar.php">Daftar Pelamar</a>
                         </li>
                     </ul>
 
@@ -177,10 +176,7 @@
                             </div>
                         </div>
                         <div class="card-tools">
-                            <a href="form-input-peng.html">
-                                <button class="btn btn-primary" data-toggle="modal"
-                                    data-target="#exampleModalCenter">Tambah<i class="fas fa-plus"></i></button>
-                            </a>
+                            
                         </div>
                     </div>
                     <!-- ./card-header -->
